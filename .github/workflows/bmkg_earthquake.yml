@@ -21,6 +21,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install requests pandas
+          
+      - name: Create data directory
+        run: 
+          mkdir -p data            # 🔥 ini bagian pentingnya
 
       - name: Run earthquake fetch script
         run: |
