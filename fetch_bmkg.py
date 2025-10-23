@@ -18,5 +18,13 @@ data = {
 }
 
 df = pd.DataFrame([data])
-df.to_csv('data/bmkg_latest.csv', index=False)
-print("Data gempa terbaru disimpan.")
+import os
+
+csv_path = 'data/bmkg_latest.csv'
+
+# Kalau file belum ada → buat baru, kalau sudah → append tanpa header
+if not os.path.exists(csv_path):
+    df.to_csv(csv_path, index=False)
+else:
+    df.to_csv(csv_path, mode='a', header=False, index=False)
+
