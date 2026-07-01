@@ -1,7 +1,7 @@
 
 # Gempa Realtime
 
-[![Fetch BMKG Earthquake Data](https://github.com/YOUR_USERNAME/gempa-realtime/actions/workflows/bmkg_earthquake.yml/badge.svg)](https://github.com/YOUR_USERNAME/gempa-realtime/actions/workflows/bmkg_earthquake.yml)
+[![Fetch BMKG Earthquake Data](https://github.com/yusufrjb/gempa-realtime/actions/workflows/bmkg_earthquake.yml/badge.svg)](https://github.com/YOUR_USERNAME/gempa-realtime/actions/workflows/bmkg_earthquake.yml)
 
 **Gempa Realtime** adalah proyek otomatis yang mengambil data gempa bumi terkini dari [BMKG](https://bmkg.go.id) (Badan Meteorologi, Klimatologi, dan Geofisika) dan menyimpannya secara periodik ke dalam file CSV. Data diperbarui setiap **10 menit** melalui GitHub Actions.
 
