@@ -3,37 +3,37 @@
 
 [![Fetch BMKG Earthquake Data](https://github.com/yusufrjb/gempa-realtime/actions/workflows/bmkg_earthquake.yml/badge.svg)](https://github.com/YOUR_USERNAME/gempa-realtime/actions/workflows/bmkg_earthquake.yml)
 
-**Gempa Realtime** adalah proyek otomatis yang mengambil data gempa bumi terkini dari [BMKG](https://bmkg.go.id) (Badan Meteorologi, Klimatologi, dan Geofisika) dan menyimpannya secara periodik ke dalam file CSV. Data diperbarui setiap **10 menit** melalui GitHub Actions.
+**Gempa Realtime** is an automated project that fetches the latest earthquake data from [BMKG](https://bmkg.go.id) (Indonesian Agency for Meteorology, Climatology and Geophysics) and periodically stores it in a CSV file. Data is updated every **10 minutes** via GitHub Actions.
 
-## Fitur
+## Features
 
-- Mengambil data gempa real-time dari API resmi BMKG
-- Menyimpan riwayat gempa dalam format CSV (`data/bmkg_latest.csv`)
-- Berjalan otomatis setiap 10 menit via GitHub Actions
-- Dapat dijalankan secara manual kapan saja
-- Data mencakup: tanggal, jam, koordinat, magnitudo, kedalaman, wilayah, dan laporan dirasakan
+- Fetches real-time earthquake data from BMKG's official API
+- Stores earthquake history in CSV format (`data/bmkg_latest.csv`)
+- Runs automatically every 10 minutes via GitHub Actions
+- Supports manual execution at any time
+- Includes: date, time, coordinates, magnitude, depth, region, and felt reports
 
-## Kolom Data
+## Data Fields
 
-| Kolom        | Deskripsi                                |
-|--------------|------------------------------------------|
-| Tanggal      | Tanggal kejadian gempa                   |
-| Jam          | Waktu kejadian gempa (WIB)               |
-| Lintang      | Koordinat lintang                        |
-| Bujur        | Koordinat bujur                          |
-| Magnitude    | Kekuatan gempa (Skala Richter)           |
-| Kedalaman    | Kedalaman gempa (km)                     |
-| Wilayah      | Lokasi pusat gempa                       |
-| Dirasakan    | Laporan gempa dirasakan (skala MMI)      |
+| Field       | Description                            |
+|-------------|----------------------------------------|
+| Tanggal     | Date of the earthquake                 |
+| Jam         | Time of the earthquake (WIB)           |
+| Lintang     | Latitude coordinate                    |
+| Bujur       | Longitude coordinate                   |
+| Magnitude   | Earthquake magnitude (Richter scale)   |
+| Kedalaman   | Earthquake depth (km)                  |
+| Wilayah     | Epicenter location                     |
+| Dirasakan   | Felt earthquake reports (MMI scale)    |
 
-## Cara Penggunaan
+## Usage
 
-### Prasyarat
+### Prerequisites
 
 - Python 3.6+
 - pip (Python package manager)
 
-### Instalasi
+### Installation
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/gempa-realtime.git
@@ -41,33 +41,33 @@ cd gempa-realtime
 pip install -r requirements.txt
 ```
 
-### Menjalankan Secara Manual
+### Running Manually
 
 ```bash
 python fetch_bmkg.py
 ```
 
-File `data/bmkg_latest.csv` akan dibuat atau diperbarui secara otomatis.
+The file `data/bmkg_latest.csv` will be created or updated automatically.
 
-## Otomatisasi
+## Automation
 
-Proyek ini menggunakan **GitHub Actions** untuk menjalankan script setiap 10 menit secara otomatis. Workflow akan:
+This project uses **GitHub Actions** to run the script every 10 minutes automatically. The workflow will:
 
-1. Checkout repository
+1. Checkout the repository
 2. Setup Python 3.11
-3. Install dependensi
-4. Menjalankan script `fetch_bmkg.py`
-5. Commit dan push data terbaru ke repository
+3. Install dependencies
+4. Run `fetch_bmkg.py`
+5. Commit and push the latest data
 
-Untuk menjalankan workflow secara manual, buka tab **Actions** > **Fetch BMKG Earthquake Data** > **Run workflow**.
+To run the workflow manually, go to the **Actions** tab > **Fetch BMKG Earthquake Data** > **Run workflow**.
 
-## Sumber Data
+## Data Source
 
-Data gempa bumi bersumber dari **BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)** melalui endpoint:
+Earthquake data is sourced from **BMKG (Badan Meteorologi, Klimatologi, dan Geofisika)** via:
 ```
 https://data.bmkg.go.id/DataMKG/TEWS/autogempa.json
 ```
 
-## Lisensi
+## License
 
-Proyek ini dilisensikan di bawah **MIT License**. Lihat file [LICENSE](LICENSE) untuk informasi lebih lanjut.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
